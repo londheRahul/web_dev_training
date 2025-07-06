@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    
+        <div class="menu-bar">
+            <img src="images/Logo.png" alt="Logo img" id="logoimage">
+            <div class="search-bar">
+              <input type="text" placeholder=" 🔎  Search..." id="search">
+                <select name="dropdown" id="dropdown">
+                     <option value="English (United States)" selected>English (United States)</option>
+                     <option value="Marathi">Marathi</option>
+                </select>
+              <Button id="login-btn" onclick="window.location.href='logIn.html'">Log in</Button>
+              <button id="sign-btn" >Sign Up</button>
+
+            </div>
+
+        </div>
+  </header>
+   ```
+ <main>
+    <div class="main-body">
+      <img src="images/Bgimage.png" alt="Background image" id="Bgimage">
+
+      
+  
+    <section class="content-container" aria-label="Main signup content">
+      <h1>
+        <span>Design with us</span>
+        <span>Explore with us</span>
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus nunc,
+        ac rhoncus odio congue quis. Sed ac semper orci, eu porttitor lacus.
+      </p>
+      <form aria-label="Email signup form" onsubmit="event.preventDefault(); alert('Thank you for signing up!');">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
+        <button type="submit" aria-label="Sign up button">Sign up</button>
+      </form>
+    </section>
+   
+      </div>
+  </main>     
+</body>
+</html>

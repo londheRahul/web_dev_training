@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log In Page</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <header>
+    <div class="menu-bar">
+      <img src="images/Logo.png" alt="Logo img" id="logoimage">
+      <div class="search-bar">
+        <input type="text" placeholder=" 🔎  Search..." id="search">
+        <select name="dropdown" id="dropdown">
+          <option value="English (United States)" selected>English (United States)</option>
+          <option value="Marathi">Marathi</option>
+        </select>
+        <button id="login-btn">Log in</button>
+        <button id="sign-btn" onclick="window.location.href='signUp.html'">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-body">
+      <img src="images/Bgimage.png" alt="Background image" id="Bgimage">
+
+      <section class="content-container" aria-label="Login Form">
+        <h1>
+          <span>Welcome Back</span>
+          <span>Log In to Continue</span>
+        </h1>
+
+        <form aria-label="Login form" onsubmit="event.preventDefault(); alert('Logged in!');">
+          <input type="email" placeholder="Enter your email" aria-label="Email" required>
+          
+          <input type="password" placeholder="Enter your password" aria-label="Password" required>
+          <button type="submit" aria-label="Log In button">Log In</button>
+        </form>
+
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>
