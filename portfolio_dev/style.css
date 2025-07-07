@@ -1,0 +1,80 @@
+.menubar {
+  display: flex;
+  background-color: #5FE0BE;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #333;
+  padding: 0 24px;
+  font-weight: 600;
+  font-size: 13px;
+  height: 60px;
+  box-sizing: border-box;  
+  
+  
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;          
+  font-style: normal;        
+  font-size: 20px;           
+  line-height: 100%;         
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  
+  
+}
+
+#logo{
+    padding-left: 7rem; 
+    padding-right: 1rem;
+     margin-right: 8rem;
+     border-right: 2px solid #333;
+     height: 60px;
+    
+}
+#menu-item1{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 2rem; 
+  
+}
+a{
+  color: #0B2131;
+   text-decoration: none;
+}
+a:hover{
+  text-decoration:underline;
+  animation-duration: 100ms;
+}
+#start-btn{
+     border-left: 2px solid #333;
+     height: 60px;
+     padding-left: 1rem;
+     padding-right: 7rem;
+     display: flex;
+     justify-content: center;  
+     align-items: center;      
+     height: 100%;             
+
+}
+#s-btn{
+background-color: #4884FF;
+color: white;
+align-self: center;
+align-items: center;
+align-content: center;
+width: 5.875rem;
+height: 2.25rem;
+}
+.prompt-regular {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
