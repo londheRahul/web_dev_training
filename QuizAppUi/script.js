@@ -1,0 +1,1 @@
+document.writeln("hellow from js");
