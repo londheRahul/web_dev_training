@@ -1,24 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizApp</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
-<body>
+
+<body class="font-['Plus_Jakarta_Sans']">
     <header>
-       <nav class="navbar">
-           <div id="logo">
-            <img src="" alt="">
-
-           </div>
-           <div id="menuitems">
-
-           </div>
-
-       </nav>
+        <nav class="navbar flex fixed w-full justify-between items-center px-10 py-4 bg-white shadow-md">
+            <div id="logo">
+                <img src="assets/logo icon.png" alt="" />
+            </div>
+            <div id="menuitems" class="hidden sm:flex space-x-4 items-center">
+                <a href="index.html">Home</a>
+                <a href=""> Categories</a>
+                <a href="">Leaderboard</a>
+                <a href="">Profile</a>
+                <button id="notification-btn">
+                    <img src="assets/bell icon.png" alt="" />
+                </button>
+                <button id="profile-btn">
+                    <img src="assets/girl png.png" alt="" />
+                </button>
+            </div>
+            <div id="bell-inmobile" class="flex sm:hidden">
+                <button id="notification-btn">
+                    <img src="assets/bell icon.png" alt="" />
+                </button>
+            </div>
+        </nav>
     </header>
+    <main class="h-fit px-4 sm:px-50">
+        <section class="hero-section">
+            <div id="hero-contain" class="flex flex-col items-center h-screen text-center py-20 px-10 sm:py-70 ">
+                <h1 class="font-bold text-3xl">Welcome to the Quiz!</h1>
+                <p class="pt-3 pb-8 text-base">
+                    Test your knowledge across a wide range of topics, from history and
+                    science to pop culture and sports. Get ready to<br />
+                    yourself and see how you stack up against other trivia enthusiasts!
+                </p>
+                <button id="StartQuiz-btn" class="font-bold bg-[#B4D3EC] px-8 py-2 text-xl rounded-xl">
+                    Start Quiz
+                </button>
+            </div>
+
+            <div class="Question-page  hidden px-6 pt-20 h-screen flex flex-col justify-between bg-white">
+
+                <!-- Question Status -->
+                <div id="question-status" class=" pb-1 sm:pb-6">
+                    <h5 id="Question-no" class="font-bold text-lg pb-2">Question 1 of 10</h5>
+                    <div id="outer" class="w-full bg-gray-200 rounded-full h-1.5">
+                        <div id="inner" class="bg-black h-1.5 rounded-full" style="width:25%;"></div>
+                    </div>
+                </div>
+
+                <!-- Timer -->
+                <div id="test-time" class="flex space-x-4 justify-center items-center w-full">
+                    <div id="minmain" class="bg-gray-100 rounded-lg px-4 py-2 text-center w-1/2 sm:px-8 py-2">
+                        <div id="for-minut" class="time">
+                            <h1 class="text-2xl font-bold text-center">00</h1>
+                        </div>
+                        <h2 class="text-gray-500 text-sm text-center">Minutes</h2>
+                    </div>
+                    <div id="secmain" class="bg-gray-100 rounded-lg px-4 py-2 text-center w-1/2 sm:px-8 py-2">
+                        <div id="for-sec" class="time">
+                            <h1 class="text-2xl font-bold text-center">00</h1>
+                        </div>
+                        <h2 class="text-gray-500 text-sm text-center">Seconds</h2>
+                    </div>
+                </div>
+
+
+                <!-- Question -->
+                <div id="Question" class="flex flex-col items-center sm:items-start space-y-4 pt-10">
+                    <h1 id="question-text" class="text-xl font-bold  py-6">
+                        this is question1
+                    </h1>
+                    <div id="q-options" class="w-full max-w-sm space-y-3">
+                        <label class="flex items-center border rounded-lg px-4 py-3 cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="option" value="option1" class="mr-3">
+                            option1
+                        </label>
+                        <label class="flex items-center border rounded-lg px-4 py-3 cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="option" value="option2" class="mr-3">
+                            option2
+                        </label>
+                        <label class="flex items-center border rounded-lg px-4 py-3 cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="option" value="option3" class="mr-3">
+                            option3
+                        </label>
+                        <label class="flex items-center border rounded-lg px-4 py-3 cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="option" value="option4" class="mr-3">
+                            option4
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Next Button -->
+                <div id="next-btn" class="flex justify-center pb-30">
+                    <button id="change-btn" class="bg-black text-white rounded-lg px-6 py-3 hover:bg-gray-800">
+                        Next Question
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- scrore-card -->
+            <section id="score-card"
+                class="flex flex-col hidden items-center justify-center h-screen bg-white text-center space-y-4">
+
+                <h1 class="text-2xl font-bold">
+                    Congratulations, <span id="result-name">Sarah</span>!
+                </h1>
+                <p class="text-gray-600">You've completed the quiz with a score of</p>
+                <span id="result-score" class="text-4xl font-bold text-black">85%</span>
+
+                <div class="flex flex-col space-y-3 mt-6 w-64">
+                    <button id="retake"
+                        class="bg-blue-200 hover:bg-blue-300 text-black font-semibold py-2 px-4 rounded-full">
+                        Retake Quiz
+                    </button>
+                    <button id="restart"
+                        class="bg-gray-100 hover:bg-gray-200 text-black font-semibold py-2 px-4 rounded-full">
+                        Return to Start
+                    </button>
+                </div>
+            </section>
+
+
+        </section>
+    </main>
+
+    <!-- Mobile Menu -->
+    <section class="bg-white fixed bottom-0 left-0 w-full sm:hidden shadow-md" id="menubar-sec">
+        <nav class="flex justify-around py-2">
+            <a href="index.html" class="flex flex-col items-center text-gray-600 hover:text-black">
+                <i class="ri-home-4-line text-xl mb-1"></i>
+                <span class="text-xs">Home</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-600 hover:text-black">
+                <i class="ri-apps-line text-xl mb-1"></i>
+                <span class="text-xs">Categories</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-600 hover:text-black">
+                <i class="ri-trophy-line text-xl mb-1"></i>
+                <span class="text-xs">Leaderboard</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-600 hover:text-black">
+                <i class="ri-user-line text-xl mb-1"></i>
+                <span class="text-xs">Profile</span>
+            </a>
+        </nav>
+    </section>
+
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
