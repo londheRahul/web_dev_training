@@ -33,6 +33,8 @@ The app displays multiple-choice questions, tracks progress, and shows a final s
 └── README.md # Project documentation
 <br>
 
+## 🎯 Live Preview
+[Click here to try the quiz online](https://quizappuiproject.netlify.app/)  
 
 ## Installation
 No installation required — just open `index.html` in a modern web browser.
