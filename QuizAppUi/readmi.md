@@ -25,9 +25,13 @@ The app displays multiple-choice questions, tracks progress, and shows a final s
 
 ## File Structure
 ├── index.html # Main HTML file
+<br>
 ├── style.css # (Optional) Additional styles
+<br>
 ├── script.js # JavaScript logic
+<br>
 └── README.md # Project documentation
+<br>
 
 
 ## Installation
