@@ -11,7 +11,7 @@ var retakeBtn = document.querySelector("#retake");
 var restartBtn = document.querySelector("#restart");
 
 const innerBar = document.getElementById("inner");
-let progress; // we'll set in resetQuiz()
+let progress; 
 var questions = [
   {
     question: "1. What is the capital of France?",
@@ -80,7 +80,7 @@ function changeQuestion() {
     let percentage = Math.round((score / questions.length) * 100);
     let passed = score >= Math.ceil(questions.length / 2);
 
-    document.getElementById("result-name").innerText = "Sarah"; // dynamic if needed
+    document.getElementById("result-name").innerText = "Rahul londhe"; 
     let resultScore = document.getElementById("result-score");
     resultScore.innerText = `${percentage}%`;
     resultScore.className =
