@@ -9,6 +9,7 @@ import Products from '../components/Products'
 function Routing() {
   return (
     <Routes>
+        <Route path="/" element={<Products />} /> 
          <Route path="/products" element={<Products />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
